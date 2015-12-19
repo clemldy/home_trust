@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  mount MailPreview => 'mail_view' if Rails.env.development?
+  # mount MailPreview => 'mail_view' if Rails.env.development?
 
   namespace :user do
-    resources :jobs 
+    resources :jobs
   end
 end

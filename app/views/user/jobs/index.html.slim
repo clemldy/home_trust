@@ -6,9 +6,9 @@ table
       th Started at
       th Finished at
       th Description
-      th
-      th
-      th
+      /th
+      /th
+      /th
 
   tbody
     - @jobs.each do |job|
@@ -16,9 +16,9 @@ table
         td = job.started_at
         td = job.finished_at
         td = job.description
-        td = link_to 'Show', user_job_path(job)
-        td = link_to 'Edit', edit_user_job_path(job)
-        td = link_to 'Destroy', user_job_path(job), data: {:confirm => 'Are you sure?'}, :method => :delete
+        /td = link_to 'Show', user_job_path(job)
+        /td = link_to 'Edit', edit_user_job_path(job)
+        /td = link_to 'Destroy', user_job_path(job), data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 

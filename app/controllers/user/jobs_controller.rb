@@ -13,7 +13,7 @@ class User::JobsController < UserController
   end
 
   def create
-    @job = Job.new job_params
+    @job = Job.new job_params.merge(user_id: current_user.id)
     if @job.save
       redirect_to user_jobs_path
     else
@@ -24,7 +24,7 @@ class User::JobsController < UserController
   private
 
     def job_params
-      params.require(:job).permit(:started_at, :finished_at, :description, :user_id)
+      params.require(:job).permit(:started_at, :finished_at, :description)
     end
 
 end
