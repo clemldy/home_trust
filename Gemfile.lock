@@ -177,8 +177,6 @@ GEM
     lumberjack (1.0.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mail_view (2.0.4)
-      tilt
     mailcatcher (0.6.2)
       activesupport (>= 4.0.0, < 5)
       eventmachine (= 1.0.8)
@@ -390,7 +388,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
-  mail_view
   mailcatcher
   pg
   pry-rails

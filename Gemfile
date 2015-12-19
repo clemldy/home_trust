@@ -28,7 +28,7 @@ group :development do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'hub', :require=>nil
-  gem 'mail_view'
+
   gem 'mailcatcher'
   gem 'quiet_assets'
   gem 'rails_layout'
