@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :professionals
   root to: 'visitors#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
+  devise_for :professionals
   ActiveAdmin.routes(self)
   devise_for :users
   # mount MailPreview => 'mail_view' if Rails.env.development?
