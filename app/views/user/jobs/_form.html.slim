@@ -1,0 +1,11 @@
+= simple_form_for([:user,@job]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :started_at
+    = f.input :finished_at
+    = f.input :description
+    = f.association :user, as: :hidden
+
+  .form-actions
+    = f.button :submit
