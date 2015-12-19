@@ -1,0 +1,25 @@
+h1 Listing jobs
+
+table
+  thead
+    tr
+      th Started at
+      th Finished at
+      th Description
+      /th
+      /th
+      /th
+
+  tbody
+    - @jobs.each do |job|
+      tr
+        td = job.started_at
+        td = job.finished_at
+        td = job.description
+        /td = link_to 'Show', user_job_path(job)
+        /td = link_to 'Edit', edit_user_job_path(job)
+        /td = link_to 'Destroy', user_job_path(job), data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Job', new_user_job_path
